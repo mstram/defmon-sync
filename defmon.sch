@@ -7736,6 +7736,8 @@ Audio, scart, microphone, headphone&lt;p&gt;
 <rectangle x1="0.635" y1="7.112" x2="5.461" y2="8.128" layer="51"/>
 <rectangle x1="-5.461" y1="7.112" x2="-0.635" y2="8.128" layer="51"/>
 <rectangle x1="-8.001" y1="4.572" x2="-3.175" y2="5.588" layer="51"/>
+<pad name="PE1" x="-5.08" y="-5.08" drill="1.3208" shape="octagon"/>
+<pad name="PE2" x="5.08" y="-5.08" drill="1.3208" shape="octagon"/>
 </package>
 </packages>
 <symbols>
@@ -9207,7 +9209,7 @@ Source: 008-0260-0_E.pdf</description>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
 <part name="P+13" library="supply1" deviceset="VCC" device=""/>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
-<part name="R1" library="rcl" deviceset="R-US_" device="0204/7" value="1k"/>
+<part name="R1" library="rcl" deviceset="R-US_" device="0204/7" value="220"/>
 <part name="C3" library="rcl" deviceset="C-US" device="025-025X050" value="100nf"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="LED1" library="led" deviceset="LED" device="3MM"/>
@@ -9217,7 +9219,7 @@ Source: 008-0260-0_E.pdf</description>
 <part name="U$2" library="connector" deviceset="C64U" device=""/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="R2" library="rcl" deviceset="R-US_" device="0204/7" value="1k"/>
+<part name="R2" library="rcl" deviceset="R-US_" device="0204/7" value="220"/>
 <part name="LED2" library="led" deviceset="LED" device="3MM"/>
 <part name="R3" library="rcl" deviceset="R-US_" device="0204/7" value="220"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
@@ -9260,9 +9262,9 @@ Source: 008-0260-0_E.pdf</description>
 <instance part="GND2" gate="1" x="165.1" y="162.56"/>
 <instance part="R2" gate="G$1" x="154.94" y="172.72"/>
 <instance part="LED2" gate="G$1" x="142.24" y="172.72" rot="R90"/>
-<instance part="R3" gate="G$1" x="193.04" y="228.6"/>
+<instance part="R3" gate="G$1" x="198.12" y="228.6"/>
 <instance part="GND3" gate="1" x="185.42" y="220.98"/>
-<instance part="P+2" gate="VCC" x="200.66" y="233.68"/>
+<instance part="P+2" gate="VCC" x="205.74" y="236.22"/>
 <instance part="GND4" gate="1" x="165.1" y="177.8"/>
 <instance part="P+3" gate="VCC" x="259.08" y="238.76"/>
 <instance part="GND6" gate="1" x="226.06" y="243.84"/>
@@ -9397,8 +9399,8 @@ Source: 008-0260-0_E.pdf</description>
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
-<wire x1="198.12" y1="228.6" x2="200.66" y2="228.6" width="0.1524" layer="91"/>
-<wire x1="200.66" y1="228.6" x2="200.66" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="228.6" x2="205.74" y2="228.6" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="228.6" x2="205.74" y2="233.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P+3" gate="VCC" pin="VCC"/>
@@ -9418,13 +9420,6 @@ Source: 008-0260-0_E.pdf</description>
 <pinref part="LED2" gate="G$1" pin="C"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="147.32" y1="172.72" x2="149.86" y2="172.72" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="X1" gate="G$1" pin="4"/>
-<pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="180.34" y1="228.6" x2="187.96" y2="228.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -9509,15 +9504,6 @@ Source: 008-0260-0_E.pdf</description>
 <label x="134.62" y="185.42" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="X1" gate="G$1" pin="5"/>
-<wire x1="154.94" y1="228.6" x2="152.4" y2="228.6" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="G$1" pin="PD1(TXD)"/>
-<wire x1="134.62" y1="205.74" x2="152.4" y2="205.74" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="205.74" x2="152.4" y2="228.6" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="TRIG1" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="PC0(ADC0)"/>
@@ -9580,6 +9566,22 @@ Source: 008-0260-0_E.pdf</description>
 <pinref part="IC2" gate="G$1" pin="PC6(/RESET)"/>
 <pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="86.36" y1="231.14" x2="83.82" y2="231.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="IC2" gate="G$1" pin="PD1(TXD)"/>
+<wire x1="134.62" y1="205.74" x2="152.4" y2="205.74" width="0.1524" layer="91"/>
+<pinref part="X1" gate="G$1" pin="5"/>
+<wire x1="154.94" y1="228.6" x2="152.4" y2="228.6" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="205.74" x2="152.4" y2="228.6" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="X1" gate="G$1" pin="4"/>
+<wire x1="180.34" y1="228.6" x2="193.04" y2="228.6" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>

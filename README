@@ -1,0 +1,9 @@
+defMon Sync Adapter is an adapter for the Commodore 64 computer. It used to synchronize a tracker called defMon with other music equipment. It connects to the user port and outputs the following signals:
+-LSDJ sync signal.
+-nanoloop sync signal.
+-midi clock.
+-din sync.
+-clock signal with adjustable resolution from 24ppqn to 2ppqn for Korg Volcas, TE Pocket Operators, Arturia Microbrute, MI Anushri etc.
+It can only work as master.
+It should also work with Prophet64.
+The firmware, PCB layouts and schematics are released under a Creative Commons cc-by-sa 3.0 license.
